@@ -1,0 +1,29 @@
+<mat-card>
+  <form #f="ngForm" (ngSubmit)="placeOrder()">
+    <div class="form-group">
+      <label for="userName">Name
+      </label>
+      <input #userName="ngModel" [(ngModel)]="shipping.name" type="text" name="userName" id="userName" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="userName.touched && userName.invalid">
+        Name is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="address">Address
+      </label>
+      <input #address="ngModel" [(ngModel)]="shipping.address" type="text" name="address" id="address" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="address.touched && address.invalid">
+        Adresss is required
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="city">City
+      </label>
+      <input #city="ngModel" [(ngModel)]="shipping.city" type="text" name="city" id="city" class="form-control" required>
+      <div class="alert alert-danger" *ngIf="city.touched && city.invalid">
+        City is required
+      </div>
+    </div>
+    <button [disabled]="!f.valid" color="primary" mat-raised-button>Place order</button>
+  </form>
+</mat-card>

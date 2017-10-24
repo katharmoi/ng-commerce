@@ -1,0 +1,89 @@
+<div class="container">
+    <mat-card class="sign-form-card">
+        <div class="card-header">
+            <mat-card-title>
+                Sign Up
+            </mat-card-title>
+        </div>
+        <form #f="ngForm" class="example-form">
+            <mat-error *ngIf="unexpectedError">
+                {{unexpectedError}}
+            </mat-error>
+            <mat-form-field class="example-full-width">
+                <input ngModel #email="ngModel" name="email" id="email" matInput placeholder="Email" required>
+                <mat-error *ngIf="email.invalid && email.errors.required">
+                    This field is required
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <input #password="ngModel" ngModel name="password" id="password" matInput placeholder="Password" required>
+                <mat-error *ngIf="password.invalid && password.errors.required">
+                    This field is required
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="example-full-width">
+                <input matInput #passwordAgain="ngModel" name="passwordAgain" id="passwordAgain" ngModel placeholder="Password Again" required>
+                <mat-error *ngIf="passwordAgain.invalid && passwordAgain.errors.required">
+                    This field is required
+                </mat-error>
+            </mat-form-field>
+            <mat-expansion-panel expanded="true">
+                <mat-expansion-panel-header>
+                    <mat-panel-title>
+                        Personal data(Optional)
+                    </mat-panel-title>
+                </mat-expansion-panel-header>
+                    <table class="example-full-width" cellspacing="0">
+                        <tr>
+                            <td>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput ngModel name="firstName" type="text" placeholder="First name">
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput ngModel name="lastName" type="text" placeholder="Last Name">
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+
+                    <p>
+                        <mat-form-field class="example-full-width">
+                            <textarea matInput ngModel name="addresOne" placeholder="Address 1"></textarea>
+                        </mat-form-field>
+                        <mat-form-field class="example-full-width">
+                            <textarea matInput ngModel name="addressTwo" placeholder="Address 2"></textarea>
+                        </mat-form-field>
+                    </p>
+
+                    <table class="example-full-width" cellspacing="0">
+                        <tr>
+                            <td>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput ngModel name="city" placeholder="City">
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput ngModel name="state" placeholder="State">
+                                </mat-form-field>
+                            </td>
+                            <td>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput #postalCode="ngModel" ngModel name="postalCode" maxlength="5" placeholder="Postal Code">
+                                    <mat-hint *ngIf="postalCode.value" align="end">{{postalCode.value.length}} / 5</mat-hint>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
+            </mat-expansion-panel>
+            <button [disabled]="!f.valid" (click)="signUp(f.value)" color="accent" mat-raised-button>Sign Up</button>
+        </form>
+        <p>Already member. Sign in
+            <a routerLink="/login">here</a>
+        </p>
+
+    </mat-card>
+</div>

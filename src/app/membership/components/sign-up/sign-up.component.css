@@ -1,0 +1,47 @@
+.container {
+    position:absolute;
+    left:50%;
+    top:50%;
+    width:30%;
+    margin-left:-200px; /* -1/2 width */
+    margin-top:-300px; /* -1/2 height */
+}
+
+mat-card {
+    padding: 0;
+}
+
+form {
+    padding: 15px;
+}
+
+.card-header {
+    background-color: rgb(245, 245, 245);
+    width: 100%;
+    text-align: center;
+}
+
+mat-card {
+    text-align: center;
+}
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+  }
+  
+.example-full-width {
+    width: 100%;
+}
+
+.horizontal-line{
+    display: block;
+    background-color: rgb(209, 209, 209);
+    height: 1px;
+    width: 80%;
+    margin: 0 auto;
+}
+button {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

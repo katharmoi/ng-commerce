@@ -1,0 +1,46 @@
+.products-tab-group {
+    border: 1px solid #e8e8e8;
+  }
+
+.row {
+ margin-bottom: 50px;
+}
+
+.pr-desc-card {
+  padding: 0;
+  margin: 0;
+}
+
+ngx-gallery {
+  padding: 1%;
+  background-color: rgb(252, 252, 252);
+}
+
+.product-desc-container {
+  background-color: rgb(243, 243, 243);
+}
+.product-title {
+  position: absolute;
+  left: 5px;
+  top: 13%;
+  font-size: 160%;
+}
+
+.product-price{
+  position: absolute;
+  left: 5px;
+  top: 26%;
+  font-size: 200%;
+}
+
+.product-adder {
+  position: absolute;
+  left: 5px;
+  top: 55%;
+}
+
+.h-line {
+  width: 95%;
+  height: 1px;
+  background-color: #ccc;
+}

@@ -1,0 +1,21 @@
+.card-container {
+    position: relative;
+    float: left;
+    margin-bottom: 20px;
+}
+.card{
+    height: 350px;
+}
+
+.card-block {
+    padding: 6px;
+}
+
+.btn {
+    position: absolute;
+    width: 98%;
+    bottom: 0px;
+    right: 0;
+    margin: 2px;
+    cursor: pointer;
+}

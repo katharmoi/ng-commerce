@@ -1,0 +1,15 @@
+<div *ngFor="let p of products" class="col-md-4 card-container">
+    <mat-card class="card" (click)="goDetails(p.$key,p.title)">
+        <img mat-card-image  [src]="p.imageUrl">
+        <div class="card-block">
+            <h4 class="card-title">{{p.title}}</h4>
+            <p class="card-text">{{ p.price | currency:'TRL':true }}</p>
+            <div *ngIf="cart">
+                <button color="primary" mat-raised-button *ngIf="cart.getQuantity(p) === 0; else updateQuantity" (click)="addToCart(p)" class="btn btn-primary">Add to Cart</button>
+            </div>
+            <ng-template #updateQuantity>
+                <product-add-remove [product]="p" [cart]="cart" class="btn"></product-add-remove>
+            </ng-template>
+        </div>
+    </mat-card>
+</div>

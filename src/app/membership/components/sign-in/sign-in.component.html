@@ -1,0 +1,30 @@
+<div class="container">
+  <mat-card class="sign-form-card">
+    <div class="card-header">
+      <mat-card-title >
+        Sign In
+      </mat-card-title>
+    </div>
+    <button (click)="signInGoogle()" class="google" mat-raised-button>Sign in With Google</button>
+    <button (click)="signInFacebook()" class="face" mat-raised-button>Sign in With Facebook</button>
+    <form #f="ngForm" >
+        <h3>Sign in with Email </h3>
+      <div class="horizontal-line"></div>
+      
+      <mat-form-field>
+        <input #email="ngModel" ngModel matInput name="email" placeholder="Email" required>
+        <mat-error>
+          Email field is required
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput #pass="ngModel" ngModel name="pass" placeholder="Password" required>
+        <mat-error>
+          Password is required
+        </mat-error>
+      </mat-form-field>
+      <button (click)="signInEmail(email.value,pass.value)" color="accent" mat-raised-button>Submit</button>
+    </form>
+    <p>No account? Create one <a routerLink="/signUp">here</a></p>
+  </mat-card>
+</div>

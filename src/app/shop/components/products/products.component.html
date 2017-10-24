@@ -1,0 +1,15 @@
+<div class="row featured">
+    <div class="col-12">
+            <featured></featured>
+    </div>   
+</div>
+<div class="row">
+    <div class="col-md-4">
+        <!-- CategoriesList -->
+        <product-filter [category]="category"></product-filter>
+    </div>
+    <div class="col-md-8">
+        <!-- Card template -->
+        <product-card [products]="filteredProducts" [cart]="cart" ></product-card>
+    </div>
+</div>
