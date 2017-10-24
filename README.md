@@ -1,6 +1,6 @@
 # ng-commerce
 
-Ecommerce app developed using Angular and Firebase
+Ecommerce spa developed using Angular and Firebase
 
 ## Libraries
 
